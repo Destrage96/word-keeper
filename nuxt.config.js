@@ -46,7 +46,7 @@ export default {
     baseURL: 'https://wordsapiv1.p.rapidapi.com/',
     headers: {
       "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-      "x-rapidapi-key": ""
+      "x-rapidapi-key": "Your API KEY"
     }
   }
 }

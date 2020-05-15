@@ -2,21 +2,26 @@
     <CheckboxGroup v-model="partOfSpeech"
                    class="part-of-speech__container"
                    @on-change="$_onChangePartOfSpeech">
+
         <Checkbox label="noun">
             <span>Noun</span>
         </Checkbox>
+
         <Checkbox label="verb">
             <span>Verb</span>
         </Checkbox>
+
         <Checkbox label="adjective">
             <span>Adjective</span>
         </Checkbox>
+
     </CheckboxGroup>
 </template>
 
 <script>
     export default {
         name: "part-of-speech-checkbox",
+
         data: function () {
             return {
                 partOfSpeech: [],
@@ -34,6 +39,8 @@
     .part-of-speech__container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 20px;
+        width: 150px;
 
         .ivu-checkbox-wrapper + span, .ivu-checkbox + span {
             margin-left: 5px;

@@ -1,17 +1,24 @@
 <template>
     <div class="words-starred__container">
-        <Search class="content-search" />
-        <StarredWord/>
+        <div class="content-search">
+            <Search/>
+            <PartOfSpeechCheckbox/>
+        </div>
+
+        <StarredWord class="content-words"/>
     </div>
 </template>
 
 <script>
     import Search from '../components/search';
+    import PartOfSpeechCheckbox from '../components/part-of-speech-checkbox';
     import StarredWord from "../components/starred-word";
+
     export default {
         components: {
             StarredWord,
-            Search
+            Search,
+            PartOfSpeechCheckbox
         }
     }
 </script>
@@ -20,10 +27,32 @@
     .words-starred__container {
         margin-top: 30px;
         display: flex;
+        flex-wrap: wrap;
 
         .content-search {
-            width: 50%;
+            width: 100%;
             margin-right: 50px;
+        }
+
+        .content-words {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .words-starred__container {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .content-search {
+                width: 50%;
+                margin-right: 50px;
+            }
+
+            .content-words {
+                width: 45%;
+            }
         }
     }
 </style>
